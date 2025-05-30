@@ -49,19 +49,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($Employee as $items)
                                     <tr> 
-                                        <td>1003</td>
-                                        <td>Peter</td>
-                                        <td>Parker</td>
-                                        <td>The Great</td>
-                                        <td>14</td>
-                                        <td>Los Angeles</td>
-                                        <td>3005</td>
+                                        <td class="">{{$items->id}}</td>
+                                        <td>{{$items-fname>}}</td>
+                                        <td>$items->lname</td>
+                                        <td>$items->midname</td>
+                                        <td>$items->age</td>
+                                        <td>$items->address</td>
+                                        <td>$items->zip</td>
+                                        <td>Action</td>
                                         <td> 
                                                 <span class="badge bg-success"><a class="btn btn-success mx-3"><h5>Edit</h5></a></span>
                                                 <span class="badge bg-danger"><a class="btn btn-danger mx-3"><h5>Delete</h5></a></span>
                                         </td>       
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
